@@ -1,6 +1,8 @@
-## After running this script we get following data
 
-## Total problems solved : 513
+
+## Link to my Codeforces Profile : [d3nominat0r](https://codeforces.com/profile/d3nominat0r)
+
+## Total Problems Solved : 513
 | Name | My submission | Language | platform | 
 |------|---------------| ---------|----------|
 | [Conveyor Belts](https://codeforces.com/problemset/problem/1811/B) | [200744711](https://codeforces.com/contest/1811/submission/200744711) | GNU C++17 (64) | Codeforces | </br>

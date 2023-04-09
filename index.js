@@ -42,9 +42,12 @@ const generateReadme = async () =>{
     const allsubmission = JSON.parse(fs.readFileSync('submissions.json'));
 
 
-let readme = `## After running this script we get following data
 
-## Total problems solved : ${allsubmission.length}
+let readme = `
+
+## Link to my Codeforces Profile : [d3nominat0r](https://codeforces.com/profile/d3nominat0r)
+
+## Total Problems Solved : ${allsubmission.length}
 | Name | My submission | Language | platform | 
 |------|---------------| ---------|----------|
 `;
