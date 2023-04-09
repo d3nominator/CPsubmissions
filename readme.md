@@ -1,6 +1,6 @@
 ## Link to my Codeforces Profile : [d3nominat0r](https://codeforces.com/profile/d3nominat0r)
 
-## Steps of Recreating this for your own handle
+### Steps of Recreating this for your own handle
 
 #### Step 1 : Clone this repository
 
@@ -14,10 +14,10 @@
 ```javascript
 response = await axios.get('https://codeforces.com/api/user.status?handle=[ Your Handle Name ]&from=1&count=100000')
 ```
-#### steps 3:
+#### step 3:
      Run "node index.js" in bash 
 
-### Result is available in readme.md file 
+#### Result is available in readme.md file 
 
 ## Total Problems Solved : 513
 | Name | My submission | Language | platform | 
