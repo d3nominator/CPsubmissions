@@ -44,9 +44,9 @@ const generateReadme = async () =>{
 
 let readme = `## After running this script we get following data
 
-        ## Total problems solved : ${allsubmission.length}
-        | Name | My submission | Language | platform | 
-        |------|---------------| ---------|----------|
+## Total problems solved : ${allsubmission.length}
+| Name | My submission | Language | platform | 
+|------|---------------| ---------|----------|
 `;
 
     for( const submision of allsubmission ){

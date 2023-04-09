@@ -1,8 +1,8 @@
 ## After running this script we get following data
 
-        ## Total problems solved : 513
-        | Name | My submission | Language | platform | 
-        |------|---------------| ---------|----------|
+## Total problems solved : 513
+| Name | My submission | Language | platform | 
+|------|---------------| ---------|----------|
 | [Conveyor Belts](https://codeforces.com/problemset/problem/1811/B) | [200744711](https://codeforces.com/contest/1811/submission/200744711) | GNU C++17 (64) | Codeforces | </br>
 | [Insert Digit](https://codeforces.com/problemset/problem/1811/A) | [200696093](https://codeforces.com/contest/1811/submission/200696093) | GNU C++17 (64) | Codeforces | </br>
 | [Lame King](https://codeforces.com/problemset/problem/1804/A) | [200530746](https://codeforces.com/contest/1804/submission/200530746) | GNU C++17 (64) | Codeforces | </br>
