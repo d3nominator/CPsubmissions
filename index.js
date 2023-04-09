@@ -10,23 +10,25 @@ const getCFsubmissions  = async () =>{
     const acSubmissions = submissions.filter(submission => submission.verdict === 'OK');
     const res = acSubmissions.map( submission => {
         return {
-            problemName : submission.problem.name,
-            problemUrl : 'https://codeforces.com/problemset/problem/${submission.problem.contestId }/${submission.problem.index}',
-            submissionUrl : 'https://codeforces.com/contest/${submission.contestId}/submission/${submision.id}', 
-            problemlanguage:  submission.programmingLanguage,
-            platform: 'codeforces',
-            timeStamp : submission.creationTimeSeconds
+            "problemName" : submission.problem.name,
+            "problemUrl" : `https://codeforces.com/problemset/problem/${submission.problem.contestId}/${submission.problem.index}`,
+            "submissionUrl" : `https://codeforces.com/contest/${submission.contestId}/submission/${submission.id}`, 
+            "problemlanguage" :  submission.programmingLanguage,
+            "platform": 'Codeforces',
+            // timeStamp : submission.creationTimeSeconds
         }
     });
+    console.log(res);
     return res;
 }
 
 
 const controller = async() => {
-    let submissions = [];
     try{
         const cfSubmission = await getCFsubmissions();
-        submissions = [...submissions,...cfSubmission];
+        let submissions = [];
+        submissions = cfSubmission;
+        // submissions = [...submissions,...cfSubmission];
         submissions.sort((a,b) => a.timeStamp - b.timeStamp);
         fs.writeFileSync('submissions.json',JSON.stringify(submissions));
         console.log("Total length : ",submissions.length);
@@ -40,9 +42,7 @@ const generateReadme = async () =>{
     const allsubmission = JSON.parse(fs.readFileSync('submissions.json'));
 
 
-    let readme = `# Result of this script 
-
-        It is inspired heavily from codemastercpp.
+    let readme = `# After running this script we get following data
 
         ## Total problems solved : ${allsubmission.length}
         | Name | My submission | Language | platform | 
@@ -50,12 +50,12 @@ const generateReadme = async () =>{
         `;
     for( const submision of allsubmission ){
         const submisionId = submision.submissionUrl.split('/').pop();
-        readme += `| [${submision.problemName}]($(submission.problemUrl)) | [${submisionId.problemName}]($(submision.SubmissionUrl))| ${submision.programmingLanguage} | ${submision.platform}  )
+        readme += `| [${submision.problemName}](${submision.problemUrl}) | [${submisionId.problemName}](${submision.SubmissionUrl}) | ${submision.problemlanguage} | ${submision.platform})
         `;
     } 
 
     fs.writeFileSync('readme.md',readme);
 };
 
-// controller();
+controller();
 generateReadme();
