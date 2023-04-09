@@ -42,7 +42,7 @@ const generateReadme = async () =>{
     const allsubmission = JSON.parse(fs.readFileSync('submissions.json'));
 
 
-    let readme = `# After running this script we get following data
+    let readme = `## After running this script we get following data
 
         ## Total problems solved : ${allsubmission.length}
         | Name | My submission | Language | platform | 
@@ -50,7 +50,7 @@ const generateReadme = async () =>{
         `;
     for( const submision of allsubmission ){
         const submisionId = submision.submissionUrl.split('/').pop();
-        readme += `| [${submision.problemName}](${submision.problemUrl}) | [${submisionId}](${submision.submissionUrl}) | ${submision.problemlanguage} | ${submision.platform})
+        readme += `| [${submision.problemName}](${submision.problemUrl}) | [${submisionId}](${submision.submissionUrl}) | ${submision.problemlanguage} | ${submision.platform} |
         `;
     } 
 
