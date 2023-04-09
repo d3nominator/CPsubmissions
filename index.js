@@ -50,7 +50,8 @@ const generateReadme = async () =>{
         `;
     for( const submision of allsubmission ){
         const submisionId = submision.submissionUrl.split('/').pop();
-        readme += `| [${submision.problemName}]($(submission.problemUrl)) | [${submisionId.problemName}]($(submision.SubmissionUrl))| ${submision.programmingLanguage} | ${submision.platform}  )`;
+        readme += `| [${submision.problemName}]($(submission.problemUrl)) | [${submisionId.problemName}]($(submision.SubmissionUrl))| ${submision.programmingLanguage} | ${submision.platform}  )
+        `;
     } 
 
     fs.writeFileSync('readme.md',readme);
