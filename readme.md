@@ -8,7 +8,7 @@
 
 ### Change
 ```javascript    
-*const response = await axios.get('https://codeforces.com/api/user.status?handle=d3nominat0r&from=1&count=100000')*
+     const response = await axios.get('https://codeforces.com/api/user.status?handle=d3nominat0r&from=1&count=100000')
 ```     
 
 ### To :
